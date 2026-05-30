@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修仙中 - 挂机修仙</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container game-container">
+    <div class="game-header">
+      <h1 id="roomName">修仙进行中</h1>
+      <div class="game-progress">
+        <span id="progressText">0 / 0</span>
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+        </div>
+        <button class="btn-logout" onclick="leaveRoom()">离开</button>
+      </div>
+    </div>
+    
+    <div class="game-main">
+      <div class="characters-panel">
+        <h2>修仙者</h2>
+        <div id="characterList" class="character-list">
+          <div class="empty-state">
+            <p>暂无角色</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story-panel">
+        <div class="story-header">
+          <h2>修仙传记</h2>
+          <button id="startBtn" class="btn btn-primary btn-sm btn-start" style="display: none;" onclick="startGame()">
+            开始修仙
+          </button>
+        </div>
+        <div id="storiesContainer" class="stories-container">
+          <div class="no-stories">
+            <p>等待游戏开始...</p>
+            <p>故事将自动生成</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="gameOverModal" class="modal-overlay" style="display: none;">
+    <div class="game-over-container">
+      <h1>游戏结束</h1>
+      <div id="winnerCard" class="winner-card"></div>
+      <div id="rankings" class="rankings"></div>
+      <button class="btn btn-primary" onclick="window.location.href='/lobby.html'" style="margin-top: 20px; max-width: 200px; margin-left: auto; margin-right: auto;">
+        返回大厅
+      </button>
+    </div>
+  </div>
+  
+  <script src="/js/game.js"></script>
+</body>
+</html>

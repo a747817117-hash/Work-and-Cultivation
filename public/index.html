@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>挂机修仙 - 上班族的修仙之旅</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="game-header">
+      <h1>修仙挂机</h1>
+      <p class="subtitle">与同事一起踏上修仙之路</p>
+    </div>
+    
+    <div class="auth-container">
+      <div class="auth-tabs">
+        <button class="tab-btn active" data-tab="login">登录</button>
+        <button class="tab-btn" data-tab="register">注册</button>
+      </div>
+      
+      <form id="loginForm" class="auth-form active">
+        <div class="form-group">
+          <label for="loginUsername">用户名</label>
+          <input type="text" id="loginUsername" placeholder="请输入用户名" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">密码</label>
+          <input type="password" id="loginPassword" placeholder="请输入密码" required>
+        </div>
+        <button type="submit" class="btn btn-primary">登录</button>
+      </form>
+      
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label for="regUsername">用户名</label>
+          <input type="text" id="regUsername" placeholder="请输入用户名（2-20个字符）" required>
+        </div>
+        <div class="form-group">
+          <label for="regPassword">密码</label>
+          <input type="password" id="regPassword" placeholder="请输入密码（至少6位）" required>
+        </div>
+        <div class="form-group">
+          <label for="regConfirmPassword">确认密码</label>
+          <input type="password" id="regConfirmPassword" placeholder="请再次输入密码" required>
+        </div>
+        <button type="submit" class="btn btn-primary">注册</button>
+      </form>
+      
+      <div id="authMessage" class="message"></div>
+    </div>
+  </div>
+  
+  <script src="/js/auth.js"></script>
+</body>
+</html>
